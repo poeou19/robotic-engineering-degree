@@ -1,0 +1,245 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+}
+.container-fluid{
+    width: 100%;
+}
+.nav-bar{
+    background-color: rgb(54, 53, 53);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.nav .nav-item{
+    width: 150px;
+    padding: 10px;
+}
+.nav .nav-link{
+    text-decoration: none;
+    color: white;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    background-color: rgb(54, 53, 53);
+    color: white;
+    z-index: 2;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a{
+    text-decoration: none;
+}
+input[type=checkbox]{display: none;}
+.toggler{
+    font-size: 26px;
+    display: none;
+}
+.dropdown-content{
+    background-color: rgb(54, 53, 53);
+    border-radius: 10px;
+    min-width: 300px;
+    padding-right: 5px;
+}
+.dropdown-content a{
+    color: white;
+}
+.dropdown-content li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* body section of main page*/
+.container{
+    padding-top: 30px;
+    width: 85%;
+    margin: auto;
+}
+.row{
+    width: 100%;
+}
+
+.col{
+    padding: 10px;
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.hero{
+    position: relative;
+    height: 400px;
+    background-image: url(image/hero.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 10px;
+}
+.hero1{
+    position: relative;
+    height: 300px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 10px;
+}
+.hero>div{
+    margin: auto;
+
+}
+.hero .heroText{
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+}
+.robot3Img{
+    width: 90%;
+    display: block;
+    margin: auto;
+    border: 10px;
+}
+.robot3Img{
+    width: 80%;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border: 10px;
+}
+.img{
+    border-radius: 20px;
+}
+/* Footer */
+.footer{
+    background-color: rgb(54, 53, 53);
+    color: white;
+}
+.footer-nav{
+    list-style: none;
+}
+.footer-nav a{
+    color: white;
+    text-decoration: none;
+}
+.register{
+    border-top: 2px solid white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Social Media icons in Footer section */
+.fa {
+    padding: 13px;
+    font-size: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook,.fa-twitter,.fa-youtube{
+    background: white;
+    color: rgb(54, 53, 53);
+  }
+
+/*Mobile Phone View first*/
+[class*="col-"]{
+    width: 100%;
+}
+
+/* 12 grid column view */
+/*Responsive Design for Medium Device: Portrait tablet and larger device*/
+@media only screen and (min-width: 600px){
+    .col-s-1{width: 8.33%;}
+    .col-s-2{width: 16.66%;}
+    .col-s-3{width: 25%;}
+    .col-s-4{width: 33.33%;}
+    .col-s-5{width: 41.66%;}
+    .col-s-6{width: 50%;}
+    .col-s-7{width: 58.33%;}
+    .col-s-8{width: 66.66%;}
+    .col-s-9{width: 75%;}
+    .col-s-10{width: 83.33%;}
+    .col-s-11{width: 91.66%;}
+    .col-s-12{width: 100%;}
+
+}
+
+/*Responsive Design for Medium Device: Landscape Tablet  and  PC*/
+@media only screen and (min-width: 768px){
+    .col-1{width: 8.33%;}
+    .col-2{width: 16.66%;}
+    .col-3{width: 25%;}
+    .col-4{width: 33.33%;}
+    .col-5{width: 41.66%;}
+    .col-6{width: 50%;}
+    .col-7{width: 58.33%;}
+    .col-8{width: 66.66%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.33%;}
+    .col-11{width: 91.66%;}
+    .col-12{width: 100%;}
+
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 768px){
+    .nav-bar{
+        position: relative;
+        justify-content: space-between;
+    }
+    .toggler{
+        display: block;
+        margin-right: 20px;
+        color: white;
+    }
+
+    .nav{
+        position: absolute;
+        left: 0; right: 0;
+        top: 40px;
+        display: none;
+        flex-direction: column;
+        background-color: rgb(54, 53, 53);
+        z-index: 2;
+    }
+    input[type=checkbox]:checked~.nav{
+        display: block;
+    }
+
+    .nav-bar img{
+        margin-left: 35px;
+    }
+
+    .hero{
+        background-position: bottom left;
+    }
+    .footer{
+        text-align: center;
+    }
+
+}
